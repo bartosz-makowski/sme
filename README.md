@@ -146,11 +146,11 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 
 ### Deployment :surfer:
 
-#### To deploy Therapists reviewer locally
+#### To deploy locally
 
 #### To deploy your project on Heroku, use the following steps: 
     
-#### Running Therapist Reviewer Locally
+#### Running Locally
 
 ### Acknowledgements :clap:
 
