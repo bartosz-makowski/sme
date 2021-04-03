@@ -1,5 +1,5 @@
 # Sports Massage Excellence
-Project of the web application designed to promote services of a massage therapists based in the area of Hertfordshire UK. Users of the website are able to book and pay for appointments on-line using STRIPE payment platform.
+Project of the web application designed to promote services of a massage therapist based in the area of Hertfordshire UK. Users of the website are able to book and pay for appointments online using STRIPE payment platform.
 
 ## Contents:book:
 ### UX:superhero_man:	
@@ -96,8 +96,10 @@ Icons used in this project come from [FontAwesome](https://fontawesome.com/).
 **Colours**
 
 Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions.
+Link to a color palette made using **coolors.co** is [here](https://coolors.co/d8d4d5-03fcba-ee6352-008dd5-f0803c)
 
 **Colours used**
+![Color theme](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-colour-palette.png)
 
 ## Wireframes :straight_ruler:
 I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. 
