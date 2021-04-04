@@ -12,7 +12,7 @@ Project of the web application designed to promote services of a massage therapi
     * Icons
     * Colours
   * **Wireframes** :straight_ruler:
-  * **Database Structure** :straight_ruler:
+  * **Models Structure** :straight_ruler:
   * **Features** :abacus:	
     * Features that have been developed
     * Features that will be implemented in the future
@@ -102,7 +102,11 @@ Link to a color palette made using **coolors.co** is [here](https://coolors.co/d
 ![Color theme](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-colour-palette.png)
 
 ## Wireframes :straight_ruler:
-I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. 
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. Wireframes are placed in wireframes [folder](https://github.com/bartosz-makowski/sme/tree/master/wireframes) 
+
+![Desktop view](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-desktop.png)
+![Tablet view](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-tablet.png)
+![Mobile view](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-mobile.png)
 
 ## **Models Structure**
 
