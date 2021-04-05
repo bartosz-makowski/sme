@@ -107,6 +107,7 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 ![Desktop view](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-desktop.png)
 ![Tablet view](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-tablet.png)
 ![Mobile view](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-mobile.png)
+![booking chart](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-booking-flow.png)
 
 ## **Models Structure**
 ### **Profiles:**
