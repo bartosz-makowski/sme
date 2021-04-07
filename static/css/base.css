@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+html {
+    font-size: 62.5%;
+    scroll-behaviour: smooth;
+}
+
+body {
+    font-family: font-family: 'Noto Serif', serif;
+    font-size: 2.3rem;
+}
