@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
+:root {
+    --theme-grey: #d8d4d5;
+    --theme-green: #03fcba;
+    --theme-red: #ee6352;
+    --theme-blue: #008dd5;
+    --theme-orange: #f0803c;
+}
+
 html {
     font-size: 62.5%;
     scroll-behaviour: smooth;
