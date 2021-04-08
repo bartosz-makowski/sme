@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
+/* Variables */
+
 :root {
     --theme-grey: #d8d4d5;
     --theme-green: #03fcba;
@@ -10,7 +12,7 @@
 
 html {
     font-size: 62.5%;
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,4 +22,22 @@ body {
     background: url('/media/background.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
+}
+
+/* Headers */
+
+#home-header {
+    font-size: calc(3rem + 1.5vw);
+}
+
+.row-50 {
+    height: 45vh;
+}
+
+
+/* Buttons */
+
+#cta-button {
+    background-color: var(--theme-orange);
+    font-size: 2.3rem;
 }
