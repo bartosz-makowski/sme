@@ -34,10 +34,24 @@ body {
     height: 45vh;
 }
 
+#home-featured {
+    background-color: var(--theme-blue);
+}
+
+#home-reviews {
+    background-color: var(--theme-grey);
+}
 
 /* Buttons */
 
 #cta-button {
     background-color: var(--theme-orange);
     font-size: 2.3rem;
+}
+
+/* Footer */
+
+.footer-container {
+    margin-bottom: 2rem;
+    padding-top: 4rem;
 }
