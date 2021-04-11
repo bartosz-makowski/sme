@@ -30,6 +30,11 @@ body {
     font-size: calc(3rem + 1.5vw);
 }
 
+#home-h1-wrapper {
+    background-color: #ffffffb8;
+    border-radius: 1.5rem;
+}
+
 .row-50 {
     height: 45vh;
 }
@@ -53,5 +58,4 @@ body {
 
 .footer-container {
     margin-bottom: 2rem;
-    padding-top: 4rem;
 }
