@@ -44,6 +44,11 @@ body {
     border-radius: 1.5rem;
 }
 
+#signup-wrapper {
+    padding-top: 10rem;
+    height: 75vh;
+}
+
 .row-50 {
     height: 45vh;
 }
