@@ -38,6 +38,10 @@
             {% block page_header %}
             {% endblock %}
 
+            {% if messages %}
+            <div class="message-container"></div>
+            {% endif %}
+            
             {% block content %}
             {% endblock %}
 
