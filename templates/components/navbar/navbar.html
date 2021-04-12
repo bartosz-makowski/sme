@@ -5,26 +5,32 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Register</a>
+      <div class="navbar-nav justify-content-center">
+        {% if not request.user.is_authenticated %}
+        <a class="nav-link" href="#">Register</a>
         <a class="nav-link" href="#">Log in</a>
-        <a class="nav-link" href="#">Log out</a>
-        <a class="nav-link" href="#">Therapist</a>
-        <a class="nav-link" href="#">Treatments</a>
-        <a class="nav-link" href="#">Location</a>
-        <a class="nav-link" href="#">Bookings</a>
-        <a class="nav-link" href="#">Reviews</a>
-        <a class="nav-link" href="#">Checkout</a>
+        
+        {% else %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             User Section
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="#">User Profile</a></li>
             <li><a class="dropdown-item" href="#">Write a review</a></li>
-            <li><a class="dropdown-item" href="#">Aftercare advice</a></li>
-          </ul>
-        </li>
+        </ul>
+    </li>
+    {% endif %}
+    <a class="nav-link" href="#">Therapist</a>
+    <a class="nav-link" href="#">Treatments</a>
+    <a class="nav-link" href="#">Location</a>
+    <a class="nav-link" href="#">Reviews</a>
+    {% if request.user.is_authenticated %}
+    <a class="nav-link" href="#">Bookings</a>
+    <a class="nav-link" href="#">Checkout</a>
+    <a class="nav-link" href="#">Log out</a>
+    {% endif %}
     </div>
   </div>
 </nav>
