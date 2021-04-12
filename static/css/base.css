@@ -44,7 +44,7 @@ body {
     border-radius: 1.5rem;
 }
 
-#allauth-wrapper {
+.allauth-wrapper {
     padding-top: 10rem;
     height: 75vh;
 }
