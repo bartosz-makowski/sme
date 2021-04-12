@@ -6,21 +6,22 @@
 
 {% block content %}
 {% include '../components/navbar/navbar.html' %}
-<div class="row" id="signup-wrapper">
-        <div class="col-12 text-center align-self-center">
-            <h1>{% trans "Sign Up" %}</h1>
-            <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-        </div>
-
-        <form class="col-12 text-center align-self-center signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-        </form>
-    
+<div class="row" id="allauth-wrapper">
+    <div class="col-12 text-center align-self-center">
+        <h1>{% trans "Sign Up" %}</h1>
+        <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+                in</a>.{% endblocktrans %}</p>
     </div>
+
+    <form class="col-12 text-center align-self-center signup" id="signup_form" method="post"
+        action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{redirect_field_value }}" />
+        {% endif %}
+        <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+    </form>
+</div>
     {% include 'components/footer/footer.html' %}
 {% endblock %}
