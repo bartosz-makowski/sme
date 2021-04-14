@@ -1,0 +1,11 @@
+
+#therapist-img {
+    margin-top: 10rem;
+}
+
+#therapist-name {
+    background-color: var(--theme-blue);
+    height: 6rem;
+    padding-top: 1rem;
+    color: #fafafa;
+}

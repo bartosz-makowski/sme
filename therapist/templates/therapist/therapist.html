@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'therapist/css/therapist.css' %}"> 
+{% endblock %}
+
 {% block content %}
-    <h1>Success installing therapists app!</h1>
+{% include 'components/navbar/navbar.html' %}
+<div class="row row-50 justify-content-center" id="therapist-img">
+    <div class="col-12 col-md-8 align-self-center text-center">
+        <img src="/media/therapist-img.png" alt="" class="img-fluid rounded">
+    </div>
+</div>
+<div class="row row-50 justify-content-center">
+    <div class="col-3 align-self-start text-center" id="therapist-name">
+        <h2>Bartosz Makowski</h2>
+    </div>
+    <div class="col-6 text-center">
+        <p>Having participated in various sports throughout my life I went through many injuries. By making my way to recovery from each of them I developed an interest in human anatomy, physiology and biomechanics. This empowered me to follow a path to the university to study Physiotherapy. After graduating I came to England and started working as a sports massage therapist in clinics in central London. Currently, I work as a Physiotherapy Assistant at Stoke Mandeville Hospital. Having practised bodywork for nearly 5 years I helped many people ranging from office workers to professional athletes overcome their injuries and allow them to feel better, move easier and aid them in reaching their goals.
+        </p>
+    </div>
+</div>
 {% endblock %}
