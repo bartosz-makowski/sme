@@ -1,6 +1,6 @@
 
 #therapist-img {
-    margin-top: 10rem;
+    margin-top: 10vh;
 }
 
 #therapist-name {
@@ -8,4 +8,9 @@
     height: 6rem;
     padding-top: 1rem;
     color: #fafafa;
+}
+
+#therapist-info {
+    background-color: #d8d4d5b7;
+    
 }
