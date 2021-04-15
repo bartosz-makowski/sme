@@ -23,7 +23,7 @@
     </li>
     {% endif %}
     <a class="nav-link" href="{% url 'therapist' %}">Therapist</a>
-    <a class="nav-link" href="#">Treatments</a>
+    <a class="nav-link" href="{% url 'treatments' %}">Treatments</a>
     <a class="nav-link" href="{% url 'location' %}">Location</a>
     <a class="nav-link" href="#">Reviews</a>
     {% if request.user.is_authenticated %}
