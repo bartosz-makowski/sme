@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'location/css/location.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'components/navbar/navbar.html' %}
+<h4>Success kurwaa!!!!!</h4>
+{% endblock %}
