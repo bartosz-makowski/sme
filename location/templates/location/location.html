@@ -7,15 +7,17 @@
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
-<div class="row">
+<div class="row row-50">
     <div class="col-6">
 
     </div>
-    <div class="col-2">
-
+    <div class="col-3 align-self-end" id="location-info">
+        <p>Our studio is located in the famous Westminster Lodge Leisure Center in the heart of st.Albans.
+        There is a free carpark for our customers and a spacious waiting area.
+        Address is 124 Hollywell Hill AL1 2DR </p>
     </div>
 </div>
-<div class="row justify-content-center">
+<div class="row row-50 justify-content-center" >
     <div class="col-12 gmap_canvas rounded">
         <iframe class="gmap_canvas" id="gmap_canvas" src="https://maps.google.com/maps?q=124%20Holywell%20Hill,%20St%20Albans%20AL1%202DR,%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no">
         </iframe>

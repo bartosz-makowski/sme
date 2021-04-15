@@ -24,6 +24,10 @@ body {
     height: 100vh;
 }
 
+.main-wrapper {
+    margin-top: 5rem;
+}
+
 .navbar-nav {
     width: 100%;
 }

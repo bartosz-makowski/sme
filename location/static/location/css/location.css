@@ -1,7 +1,11 @@
-
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 350px;
     width: 350px;
+}
+
+#location-info {
+background-color: #d8d4d5b7;
+margin-bottom: 30px;
 }
