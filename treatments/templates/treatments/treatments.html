@@ -6,4 +6,13 @@
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
+<div class="row">
+{% for treatment in treatments %}
+<div class="col-6">
+    <h4>{{ treatment.name }}</h4>
+    <p>{{ treatment.description }}</p>
+    <img src="/media/{{treatment.image}}" alt="{{ tretment.name }}">
+</div>
+{% endfor %}
+</div>
 {% endblock %}
