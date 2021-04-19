@@ -2,16 +2,17 @@
 {% load static %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'treatments/css/treatments.css' %}">
 {% endblock %}
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
-<div class="row">
+<div class="row justify-content-around">
 {% for treatment in treatments %}
-<div class="col-6">
+<div class="col-4 treatment-card">
     <h4>{{ treatment.name }}</h4>
     <p>{{ treatment.description }}</p>
-    <img src="/media/{{treatment.image}}" alt="{{ tretment.name }}">
+    <img src="/media/{{treatment.image}}" class="img-fluid rounded" alt="{{ treatment.name }}">
 </div>
 {% endfor %}
 </div>
