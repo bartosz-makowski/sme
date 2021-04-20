@@ -22,10 +22,18 @@
             </div>
         </div>
 
-        <div class="row row-50 justify-content-center align-items-center" id="home-featured">
-            <div class="col-12 text-center">
-                <p>Featured treatment or deals will be here</p>
-            </div>
+        <div class="row row-50" id="home-featured">
+                {% for treatment in treatments %}
+                    {% if treatment.featured %}
+                    <div class="col-6 align-self-center">
+                        <h4>{{ treatment.name }}</h4>
+                        <p>{{ treatment.description }}</p>
+                    </div>
+                    <div class="col-6 align-self-center">
+                        <img src="/media/{{treatment.image}}" class="img-fluid rounded" alt="{{ treatment.name }}">
+                    </div>
+                    {% endif %}
+                {% endfor %}
         </div>
 
         <div class="row row-50 justify-content-center align-items-center" id="home-reviews">
