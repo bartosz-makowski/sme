@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block page_header %}
-    
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -22,10 +22,11 @@
             </div>
         </div>
 
-        <div class="row row-50" id="home-featured">
+        <div class="row row-50 justify-content-around" id="home-featured">
+            <h2 class="text-center">Our Featured treatment for this month</h2>
                 {% for treatment in treatments %}
                     {% if treatment.featured %}
-                    <div class="col-6 align-self-center">
+                    <div class="col-4 align-self-center">
                         <h4>{{ treatment.name }}</h4>
                         <p>{{ treatment.description }}</p>
                     </div>
