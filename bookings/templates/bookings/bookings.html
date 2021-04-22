@@ -2,10 +2,21 @@
 {% load static %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'bookings/css/bookings.css' %}">
 {% endblock %}
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
+<h2>Book your session</h2>
+<h3>Price of one 1hr session is £50</h3>
+<div class="row row-50 justify-content-around">
+    <div class="col-3 schedule-card align-self-center">
+        <h3>Therapist schedule</h3>
+        <h4>Mon-Friday: 8:00 - 17:00</h4>
+    </div>
+    <div class="col-6">
 
+    </div>
+</div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
