@@ -1,0 +1,22 @@
+.review-card {
+    background-color: #fafafa;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.review-title {
+
+}
+
+.review-description {
+
+}
+
+.review-author {
+
+}
+
+.review-dots {
+    color: var(--theme-orange);
+    font-size: 3rem;
+}

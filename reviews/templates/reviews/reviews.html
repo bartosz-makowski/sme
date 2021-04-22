@@ -7,12 +7,14 @@
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
-<div class="row">
+<div class="row justify-content-around">
     {% for review in reviews %}
-    <div class="col-4 review-card">
-        <h2 class="review-title">{{ review.title }}</h2>
-        <h3 class="review-description">{{ review.description }}</h3>
-        <h4 class="review-author">{{ review.author }}</h4>
+    <div class="col-4 review-card rounded">
+        <h2 class="review-dots text-center">....</h2>
+        <h2 class="review-title">Title: {{ review.title|capfirst }}</h2>
+        <h3 class="review-description">{{ review.description|capfirst }}</h3>
+        <h4 class="review-author">Author: {{ review.author }}</h4>
+        <h2 class="review-dots text-center">....</h2>
     </div>
     {% endfor %}
 </div>
