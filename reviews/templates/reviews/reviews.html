@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block extrea_css %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'reviews/css/reviews.css' %}">
 {% endblock %}
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
-
+<div class="row">
+    {% for review in reviews %}
+    <div class="col-4 review-card">
+        <h2 class="review-title">{{ review.title }}</h2>
+        <h3 class="review-description">{{ review.description }}</h3>
+        <h4 class="review-author">{{ review.author }}</h4>
+    </div>
+    {% endfor %}
+</div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
 
