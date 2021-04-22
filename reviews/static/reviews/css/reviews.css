@@ -4,16 +4,9 @@
     padding: 2rem;
 }
 
-.review-title {
-
-}
-
-.review-description {
-
-}
-
-.review-author {
-
+.review-text {
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .review-dots {

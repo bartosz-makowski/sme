@@ -11,9 +11,9 @@
     {% for review in reviews %}
     <div class="col-4 review-card rounded">
         <h2 class="review-dots text-center">....</h2>
-        <h2 class="review-title">Title: {{ review.title|capfirst }}</h2>
-        <h3 class="review-description">{{ review.description|capfirst }}</h3>
-        <h4 class="review-author">Author: {{ review.author }}</h4>
+        <h2 class="review-text">Title: {{ review.title|capfirst }}</h2>
+        <h3 class="review-text">{{ review.description|capfirst }}</h3>
+        <h4 class="review-text text-end">Author: {{ review.author }}</h4>
         <h2 class="review-dots text-center">....</h2>
     </div>
     {% endfor %}
