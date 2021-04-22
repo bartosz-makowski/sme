@@ -9,7 +9,7 @@
 {% include 'components/navbar/navbar.html' %}
 <div class="row justify-content-around">
 {% for treatment in treatments %}
-<div class="col-4 treatment-card">
+<div class="col-4 treatment-card shadow-lg">
     <h4>{{ treatment.name }}</h4>
     <p>{{ treatment.description }}</p>
     <img src="/media/{{treatment.image}}" class="img-fluid rounded" alt="{{ treatment.name }}">

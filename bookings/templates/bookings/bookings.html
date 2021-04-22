@@ -10,12 +10,17 @@
 <h2>Book your session</h2>
 <h3>Price of one 1hr session is £50</h3>
 <div class="row row-50 justify-content-around">
-    <div class="col-2 schedule-card align-self-center text-center rounded">
+    <div class="col-2 schedule-card align-self-center text-center rounded shadow-lg">
         <h3>Therapist schedule</h3>
         <h4>Mon-Friday: 8:00 - 17:00</h4>
     </div>
     <div class="col-6">
-
+        <h3>Please select the date of your appointment</h3>
+        <select name="appt_date" id="appt_date">
+            {% for day in days %}
+            <option value="{{ day.date }}">{{ day.date }}</option>
+            {% endfor %}
+        </select>
     </div>
 </div>
 {% include 'components/footer/footer.html' %}
