@@ -3,6 +3,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'reviews/css/reviews.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -38,9 +39,18 @@
         </div>
 
         <div class="row row-50 justify-content-center align-items-center" id="home-reviews">
-            <div class="col-12 text-center">
-                <p>Reviews will be here</p>
-            </div>
+            <h2 class="text-center">What people say about us:</h2>
+            {% for review in reviews %}
+                {% if review.featured %}
+                <div class="col-4 review-card rounded">
+                    <h2 class="review-dots text-center">....</h2>
+                    <h2 class="review-text">Title: {{ review.title|capfirst }}</h2>
+                    <h3 class="review-text">{{ review.description|capfirst }}</h3>
+                    <h4 class="review-text text-end">Author: {{ review.author }}</h4>
+                    <h2 class="review-dots text-center">....</h2>
+                </div>
+                {% endif %}
+            {% endfor %}
         </div>
     {% include 'components/footer/footer.html' %}
 {% endblock %}

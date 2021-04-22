@@ -2,6 +2,7 @@
     background-color: #fafafa;
     margin: 2rem;
     padding: 2rem;
+    box-shadow: 5px 10px 8px 10px #888888;
 }
 
 .review-text {
