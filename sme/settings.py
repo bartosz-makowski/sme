@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'therapist',
-    'location',
     'treatments',
     'reviews',
     'deals',

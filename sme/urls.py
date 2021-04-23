@@ -23,7 +23,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('accounts/', include('allauth.urls')),
     path('therapist/', include('therapist.urls')),
-    path('location/', include('location.urls')),
     path('treatments/', include('treatments.urls')),
     path('reviews/', include('reviews.urls')),
     path('deals/', include('deals.urls')),
