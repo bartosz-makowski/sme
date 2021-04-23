@@ -17,22 +17,24 @@
         
         <div class="row row-50 align-items-center">
             <div class="col-4 text-end">
-                <button type="button" class="btn btn-primary" id="cta-button">
+                <a type="button" class="btn btn-primary" id="cta-button" href="">
                     Book your session
-                </button>
+                </a>
             </div>
         </div>
 
         <div class="row row-50 justify-content-around" id="home-featured">
             <h2 class="text-center">Our Featured treatment for this month</h2>
-                {% for treatment in treatments %}
-                    {% if treatment.featured %}
+                {% for deal in deals %}
+                    {% if deal.featured %}
                     <div class="col-4 align-self-center">
-                        <h4>{{ treatment.name }}</h4>
-                        <p>{{ treatment.description }}</p>
+                        <h2>{{ deal.name|capfirst }}</h2>
+                        <h2>Price: £{{ deal.price }}</h2>
+                        <p>{{ deal.description }}</p>
+                        <a class="btn btn-warning" href="" type="button">Add to basket</a>
                     </div>
                     <div class="col-6 align-self-center">
-                        <img src="/media/{{treatment.image}}" class="img-fluid rounded" alt="{{ treatment.name }}">
+                        <img src="/media/{{deal.image}}" class="img-fluid rounded" alt="{{ deal.name }}">
                     </div>
                     {% endif %}
                 {% endfor %}

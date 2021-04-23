@@ -1,16 +1,16 @@
 from django.shortcuts import render, HttpResponse
 
-from treatments.models import Treatment
+from deals.models import Deal
 from reviews.models import Review
 
 
 def index(request):
     """A view to display index page"""
-    treatments = Treatment.objects.all()
+    deals = Deal.objects.all()
     reviews = Review.objects.all()
 
     context = {
-        'treatments': treatments,
+        'deals': deals,
         'reviews': reviews,
     }
     return render(request, 'home/index.html', context)

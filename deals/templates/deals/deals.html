@@ -14,6 +14,7 @@
     <h4>Price: £{{ deal.price}}</h4>
     <p>{{ deal.description|capfirst }}</p>
     <img src="/media/{{ deal.image }}" class="img-fluid rounded" alt="{{ deal.name }}">
+    <a class="btn btn-warning" href="" type="button">Add to basket</a>
 </div>
 {% endfor %}
 {% include 'components/footer/footer.html' %}
