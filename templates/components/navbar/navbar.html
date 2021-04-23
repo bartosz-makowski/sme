@@ -15,7 +15,6 @@
             <a class="nav-link" href="{% url 'location' %}">Location</a>
             <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
         {% if request.user.is_authenticated %}
-            <a class="nav-link" href="{% url 'bookings' %}">Bookings</a>
             <a class="nav-link" href="#">Checkout</a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
