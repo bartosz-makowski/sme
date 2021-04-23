@@ -2,10 +2,19 @@
 {% load static %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'deals/css/deals.css' %}">
 {% endblock %}
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
-<h2>Welcome to deals site</h2>
+<div class="row justify-content-around">
+{% for deal in deals %}
+<div class="col-4 deal-card shadow-lg">
+    <h3>{{ deal.name|capfirst }}</h3>
+    <h4>Price: £{{ deal.price}}</h4>
+    <p>{{ deal.description|capfirst }}</p>
+    <img src="/media/{{ deal.image }}" class="img-fluid rounded" alt="{{ deal.name }}">
+</div>
+{% endfor %}
 {% include 'components/footer/footer.html' %}
 {% endblock %}
