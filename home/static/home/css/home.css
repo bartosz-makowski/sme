@@ -1,4 +1,40 @@
+#home-header {
+    font-size: calc(3rem + 1.5vw);
+}
+
+#home-h1-wrapper {
+    background-color: #ffffffb8;
+    border-radius: 1.5rem;
+}
+
 #home-featured {
     background-color: var(--theme-blue);
     color: #fafafa;
 }
+
+#home-location {
+    background-color: var(--theme-orange);
+    color: #000;
+}
+
+.row-50 {
+    height: 50vh;
+}
+
+
+#home-reviews {
+    background-color: var(--theme-grey);
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 350px;
+    width: 350px;
+}
+
+#location-info {
+background-color: #d8d4d5b7;
+margin-bottom: 30px;
+}
+

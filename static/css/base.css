@@ -40,33 +40,12 @@ body {
 
 /* Headers */
 
-#home-header {
-    font-size: calc(3rem + 1.5vw);
-}
-
-#home-h1-wrapper {
-    background-color: #ffffffb8;
-    border-radius: 1.5rem;
-}
 
 .allauth-wrapper {
     padding-top: 10rem;
     height: 75vh;
 }
 
-
-.row-50 {
-    height: 50vh;
-}
-
-#home-featured {
-    background-color: var(--theme-blue);
-    color: #fafafa;
-}
-
-#home-reviews {
-    background-color: var(--theme-grey);
-}
 
 /* Buttons */
 

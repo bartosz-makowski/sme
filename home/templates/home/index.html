@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="row row-50 justify-content-around" id="home-featured">
+        <div class="row row-50 justify-content-around align-items-center" id="home-featured">
             <h2 class="text-center">Our Featured treatment for this month</h2>
                 {% for deal in deals %}
                     {% if deal.featured %}
@@ -54,5 +54,23 @@
                 {% endif %}
             {% endfor %}
         </div>
-    {% include 'components/footer/footer.html' %}
+        <div class="row row-50 justify-content-around align-items-center" id="home-location">
+            <h2 class="text-center">Our location:</h2>
+            {% if location %}
+            <div class="col-4 align-self-center text-center">
+                <img src="/media/location.png" alt="" class="img-fluid rounded">
+            </div>
+            <div class="col-4" id="location-info">
+                <p>Our studio is located in the famous Westminster Lodge Leisure Center in the heart of st.Albans.
+                    There is a spacious waiting area and a free carpark for our customers.
+                    Address is 124 Hollywell Hill AL1 2DR </p>
+            </div>
+            <div class="col-4 gmap_canvas rounded">
+                <iframe class="gmap_canvas" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=124%20Holywell%20Hill,%20St%20Albans%20AL1%202DR,%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no">
+                </iframe>
+            </div>
+            {% endif %}
+        </div>
 {% endblock %}
