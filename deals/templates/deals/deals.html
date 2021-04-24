@@ -14,7 +14,12 @@
     <h4>Price: £{{ deal.price}}</h4>
     <p>{{ deal.description|capfirst }}</p>
     <img src="/media/{{ deal.image }}" class="img-fluid rounded" alt="{{ deal.name }}">
-    <a class="btn btn-warning" href="" type="button">Add to basket</a>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Add to basket">
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+    </form>
+    
 </div>
 {% endfor %}
 {% include 'components/footer/footer.html' %}
