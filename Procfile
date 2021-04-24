@@ -1,1 +1,1 @@
-web: gunicorn sme.wsgi:application
+web:gunicorn sme.wsgi:application
