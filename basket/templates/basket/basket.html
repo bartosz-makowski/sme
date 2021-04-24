@@ -6,6 +6,15 @@
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
-
+<div class="row justify-content-center">
+    <div class="col-6 text-center">
+        <h2>Items in your bag:</h2>
+        {% if basket_items %}
+            <h3>ITEM</h3>
+        {% else %}
+            <h3>Your basket is empty</h3>
+        {% endif %}
+    </div>
+</div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
