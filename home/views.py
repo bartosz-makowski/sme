@@ -9,7 +9,7 @@ def index(request):
     """A view to display index page"""
     deals = Deal.objects.all()
     reviews = Review.objects.all()
-    location = Location.objects.get()
+    location = Location.objects.all()
 
     context = {
         'deals': deals,
