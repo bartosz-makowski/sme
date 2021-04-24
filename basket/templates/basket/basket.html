@@ -46,6 +46,22 @@
                     <td class="py-3">
                         <p class="my-0">£{{ total }}</p>
                     </td>
+                    <td class="py-3">
+                        <a href="{% url 'deals' %}" class="btn btn-secondary rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                    </td>
+                    <td class="py-3">
+                        <a href="" class="btn btn-warning rounded-0 btn-lg">
+                            <span class="text-uppercase">Secure Checkout</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </a>
+                    </td>
                 </tr>
             </table>
         {% else %}
