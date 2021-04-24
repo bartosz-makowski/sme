@@ -14,8 +14,9 @@
     <h4>Price: £{{ deal.price}}</h4>
     <p>{{ deal.description|capfirst }}</p>
     <img src="/media/{{ deal.image }}" class="img-fluid rounded" alt="{{ deal.name }}">
-    <form action="" method="POST">
+    <form action="{% url 'add_to_basket' deal.id %}" method="POST">
         {% csrf_token %}
+        <input type="hidden" value="1" name="quantity" data-item_id="{{ deal.id}}" id="id_qty_{{ deal.id }}">
         <input type="submit" value="Add to basket">
         <input type="hidden" name="redirect_url" value="{{ request.path }}">
     </form>
