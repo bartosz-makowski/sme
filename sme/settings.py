@@ -26,7 +26,7 @@ SECRET_KEY = '&uqj+laxm+odbnl-g@sorr&h)d8y*!hi4x3m$eygc42_3_6%=7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sportsmassageexcellence.herokuapp.com', 'localhost']
 
 
 # Application definition
