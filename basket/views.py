@@ -19,10 +19,12 @@ def add_to_basket(request, deal_id):
 
     if deal_id in list(basket.keys()):
         basket[deal_id] += quantity
-        messages.success(request, f'Added {deal.name} £{deal.price} to your basket')
+        messages.success(
+            request, f'Added {deal.name} £{deal.price} to your basket')
     else:
         basket[deal_id] = quantity
-        messages.success(request, f'Added {deal.name} £{deal.price} to your basket')
+        messages.success(
+            request, f'Added {deal.name} £{deal.price} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
@@ -33,7 +35,8 @@ def adjust_basket(request, deal_id):
     deal = Deal.objects.get(pk=deal_id)
     basket = request.session.get('basket', {})
     basket.pop(deal_id)
-    messages.success(request, f'Removed: {deal.name} £{deal.price} from your basket')
+    messages.success(
+        request, f'Removed: {deal.name} £{deal.price} from your basket')
 
     request.session['basket'] = basket
     return redirect(reverse('basket'))
