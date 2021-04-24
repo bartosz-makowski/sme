@@ -51,7 +51,7 @@ body {
 }
 
 .row-50 {
-    height: 50vh;
+    min-height: 50vh;
 }
 
 /* Buttons */
