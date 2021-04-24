@@ -30,6 +30,11 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.name|title }}</strong></p>
+                            <form action="{% url 'adjust_basket' item.item_id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" value="{{ item.product.quantity }}" name="quantity" data-item_id="{{ item.product.id}}" id="id_qty_{{ item.product.id }}">
+                                <input type="submit" value="Delete" class="btn btn-danger">
+                            </form>
                         </td>
                         <td class="py-3">
                             <p class="my-0">£{{ item.product.price }}</p>
