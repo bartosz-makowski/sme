@@ -8,6 +8,10 @@
     --theme-red: #ee6352;
     --theme-blue: #008dd5;
     --theme-orange: #f0803c;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
 }
 
 html {
@@ -58,10 +62,30 @@ body {
 }
 
 
+/*Toasts*/
+
+.toast {
+    font-size: 2rem;
+}
 .message-container {
-    z-index: 99999;
+    z-index: 9999;
 }
 
+#toast-success {
+    color: var(--bs-success);
+}
+
+#toast-info {
+    color: var(--bs-info);
+}
+
+#toast-warning {
+    color: var(--bs-warning);
+}
+
+#toast-error {
+    color: var(--bs-danger);
+}
 
 /* Footer */
 

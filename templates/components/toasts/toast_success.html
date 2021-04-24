@@ -1,13 +1,9 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
-    <div class="w-100 toast-capper bg-success"></div>
+<div class="toast rounded-0 border-top-0" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
     <div class="toast-header bg-white text-dark">
-        <strong class="mr-auto">Success!</strong>
-        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <strong class="mx-auto" id="toast-success">Success</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body bg-white">
-        {{ message }}        
+    <div class="toast-body">
+        {{ message }}
     </div>
 </div>
