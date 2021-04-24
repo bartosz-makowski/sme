@@ -2,15 +2,52 @@
 {% load static %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'basket/css/basket.css' %}">
 {% endblock %}
 
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
 <div class="row justify-content-center">
-    <div class="col-6 text-center">
+    <div class="col-6 text-center" id="table-wrapper">
         <h2>Items in your bag:</h2>
+
         {% if basket_items %}
-            <p>{{ basket_items }}</p>
+        <div class="table-responsive rounded">
+            <table class="table table-sm table-borderless">
+                <thead class="text-black">
+                    <tr>
+                        <th scope="col">Product Info</th>
+                        <th scope="col"></th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                    </tr>
+                </thead>
+        
+                {% for item in basket_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="/media/{{ item.product.image }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name|title }}</strong></p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td class="p-3 w-25">
+                        <p>Basket total:</p>
+                    </td>
+                    <td class="py-3">
+                        <p class="my-0">£{{ total }}</p>
+                    </td>
+                </tr>
+            </table>
         {% else %}
             <h3>Your basket is empty</h3>
         {% endif %}
