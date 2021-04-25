@@ -58,7 +58,7 @@
             <h2 class="text-center">Our location:</h2>
             {% for location in locations %}
             <div class="col-4 align-self-center text-center">
-                <img src="{{ MEDIA_URL }}{{location.image}}" alt="" class="img-fluid rounded">
+                <img src="{{ MEDIA_URL }}{{location.image}}" alt="{{location.image}}" class="img-fluid rounded">
             </div>
             <div class="col-4" id="location-info">
                 <p>{{location.description}} </p>
