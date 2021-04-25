@@ -9,11 +9,11 @@ def index(request):
     """A view to display index page"""
     deals = Deal.objects.all()
     reviews = Review.objects.all()
-    location = Location.objects.all()
+    locations = Location.objects.all()
 
     context = {
         'deals': deals,
         'reviews': reviews,
-        'location': location
+        'locations': locations
     }
     return render(request, 'home/index.html', context)
