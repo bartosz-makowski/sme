@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'checkout',
     'basket',
     'storages',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'sme.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -82,6 +85,10 @@ TEMPLATES = [
                 'basket.contexts.basket_contents',
                 'django.template.context_processors.media',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.cripsy_forms_tags',
+                'crispy_forms.templatetags.cripsy_forms_field',
+            ]
         },
     },
 ]
