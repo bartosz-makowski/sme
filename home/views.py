@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 
+
 from deals.models import Deal
 from reviews.models import Review
 from .models import Location

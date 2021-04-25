@@ -12,7 +12,7 @@
 <div class="col-4 treatment-card shadow-lg">
     <h4>{{ treatment.name }}</h4>
     <p>{{ treatment.description }}</p>
-    <img src="/media/{{treatment.image}}" class="img-fluid rounded" alt="{{ treatment.name }}">
+    <img src="{{ MEDIA_URL }}{{treatment.image}}" class="img-fluid rounded" alt="{{ treatment.name }}">
 </div>
 {% endfor %}
 </div>

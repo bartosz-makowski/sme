@@ -34,7 +34,7 @@
                         <a class="btn btn-warning" href="" type="button">Add to basket</a>
                     </div>
                     <div class="col-6 align-self-center">
-                        <img src="/media/{{deal.image}}" class="img-fluid rounded" alt="{{ deal.name }}">
+                        <img src="{{ MEDIA_URL }}{{deal.image}}" class="img-fluid rounded" alt="{{ deal.name }}">
                     </div>
                     {% endif %}
                 {% endfor %}
@@ -58,7 +58,7 @@
             <h2 class="text-center">Our location:</h2>
             {% for location in locations %}
             <div class="col-4 align-self-center text-center">
-                <img src="/media/{{location.image}}" alt="" class="img-fluid rounded">
+                <img src="{{ MEDIA_URL }}{{location.image}}" alt="" class="img-fluid rounded">
             </div>
             <div class="col-4" id="location-info">
                 <p>{{location.description}} </p>
