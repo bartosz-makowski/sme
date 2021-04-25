@@ -26,7 +26,7 @@
                 {% for item in basket_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="/media/{{ item.product.image }}">
+                            <img class="img-fluid rounded" src="{{MEDIA_URL}}{{ item.product.image }}">
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.name|title }}</strong></p>
@@ -60,7 +60,7 @@
                         </a>
                     </td>
                     <td class="py-3">
-                        <a href="" class="btn btn-warning rounded-0 btn-lg">
+                        <a href="{% url 'checkout' %}" class="btn btn-warning rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
