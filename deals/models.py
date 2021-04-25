@@ -6,7 +6,6 @@ class Deal(models.Model):
     price = models.IntegerField(max_length=3)
     description = models.TextField()
     image = models.ImageField(null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     featured = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
