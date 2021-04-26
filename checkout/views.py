@@ -3,6 +3,7 @@ from django.contrib import messages
 
 from . import forms
 from .models import Order, OrderLineItem
+from basket.contexts import basket_contents
 
 
 def checkout(request):
@@ -14,7 +15,10 @@ def checkout(request):
         return redirect(reverse('deals'))
 
     form = forms.OrderForm
-
+    current_basket = basket_contents(request)
+    total = current_basket['total']
+    stripe_total = round(total * 100)
+    
     context = {
         'form': form,
         'stripe_public_key': 'pk_test_51IkGcQCqi9X9Ek55OpYF0Joe1pb0BVQHR2KyAAeK9OwUUETzm97MTTtl9gTnC8efj0TeckiXCpfEWRkurUKyZAR900Zvlos3DT',
