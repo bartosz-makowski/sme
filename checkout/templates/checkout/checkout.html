@@ -8,46 +8,50 @@
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
 <h2>Please fill out the form to complete your purchase</h2>
-<div class="col-8">
-    <form method="POST" action="{% url 'checkout' %}" id="payment-form">
-        {% csrf_token %}
-        <fieldset>
-            <legend>Details</legend>
-            {{ form.full_name | as_crispy_field }}
-            {{ form.email | as_crispy_field }}
-            {{ form.phone_number | as_crispy_field }}
-        </fieldset>
-        <fieldset class="">
-            <legend>Delivery information</legend>
-            {{ form.street_address1 | as_crispy_field }}
-            {{ form.street_address2 | as_crispy_field }}
-            {{ form.postcode | as_crispy_field }}
-            {{ form.town_or_city | as_crispy_field }}
-            <div class="col-6">
-                {% if user.is_authenticated %}
-                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                {% else %}
-                <label class="form-check-label" for="id-save-info">
-                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                </label>
-                {% endif %}
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Payment information</legend>
-            <div class="mb-3" id="card-element">
+<div class="row">
+    <div class="col-8">
+        <form method="POST" action="{% url 'checkout' %}" id="payment-form">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Details</legend>
+                {{ form.full_name | as_crispy_field }}
+                {{ form.email | as_crispy_field }}
+                {{ form.phone_number | as_crispy_field }}
+            </fieldset>
+            <fieldset class="">
+                <legend>Delivery information</legend>
+                {{ form.street_address1 | as_crispy_field }}
+                {{ form.street_address2 | as_crispy_field }}
+                {{ form.postcode | as_crispy_field }}
+                {{ form.town_or_city | as_crispy_field }}
+                <div class="col-6">
+                    {% if user.is_authenticated %}
+                    <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                        profile</label>
+                    <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
+                        checked>
+                    {% else %}
+                    <label class="form-check-label" for="id-save-info">
+                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                    </label>
+                    {% endif %}
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Payment information</legend>
+                <div class="mb-3" id="card-element">
 
-            </div>
+                </div>
 
-            <div class="" id="card-errors" role="alert">
-                
-            </div>
-        </fieldset>
-        <a href="{% url 'basket' %}">Go Back</a>
-        <input type="submit" value="PAY £{{ total }}">
-    </form>
+                <div class="" id="card-errors" role="alert">
+
+                </div>
+            </fieldset>
+            <a href="{% url 'basket' %}">Go Back</a>
+            <input type="submit" value="PAY £{{ total }}">
+        </form>
+    </div>
 </div>
 
 {% include 'components/footer/footer.html' %}

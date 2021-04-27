@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'components/navbar/navbar.html' %}
+<h2>Thank You</h2>
+<div class="col-8">
+    <h3>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</h3>
+</div>
+
+{% include 'components/footer/footer.html' %}
+{% endblock %}

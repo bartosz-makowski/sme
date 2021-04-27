@@ -35,15 +35,15 @@ def checkout(request):
             order = form.save()
             for item_id, item_data in basket.items():
                 try:
-                    deal = Deal.objects.get(id=item_id)
+                    product = Deal.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            deal=deal,
+                            product=product,
                             quantity=item_data
-                    )
-                    order_line_item.save()
-                except Deal.DoesNotExists:
+                        )
+                        order_line_item.save()
+                except Deal.DoesNotExist:
                     messages.error(request,
                                    "One of the items in your basket wasn't found in our database. Please contact us for help"
                                    )
@@ -89,8 +89,8 @@ def checkout_success(request, order_number):
     """Handles successful checkouts """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(reqeust, f'Order successful! \
-        Your order number is {order_number}. A confirmation email will be sent to {order.email}. We will be in touch to arrange your appointment')
+    messages.success(request, f'Order successful! \
+        Your order number is {order_number}. A confirmation email will be sent to {order.email}. Please get in touch to arrange your appointment')
     if 'basket' in request.session:
         del request.session['basket']
     
@@ -99,4 +99,4 @@ def checkout_success(request, order_number):
         'order': order,
     }
 
-    return render(reqeust, template, context)
+    return render(request, template, context)
