@@ -47,6 +47,7 @@
                 <div class="" id="card-errors" role="alert">
 
                 </div>
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <a href="{% url 'basket' %}">Go Back</a>
             <input type="submit" value="PAY £{{ total }}">

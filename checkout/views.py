@@ -51,7 +51,11 @@ def checkout(request):
         form = OrderForm(form_data)
 
         if form.is_valid():
-            order = form.save()
+            order = form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_basket = json.dumps(basket)
+            order.save()
             for item_id, item_data in basket.items():
                 try:
                     product = Deal.objects.get(id=item_id)
