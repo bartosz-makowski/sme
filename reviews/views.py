@@ -16,9 +16,26 @@ def reviews(request):
     }
     return render(request, 'reviews/reviews.html', context)
 
+
 def write_review(request):
     """A view to display a form to Create a review"""
     form = ReviewForm
+
+    if request.method == 'POST':
+        form_data = {
+            'title': request.POST['title'],
+            'description': request.POST['description'],
+            'author': request.POST['author'],
+        }
+
+        form = ReviewForm(form_data)
+
+        if form.is_valid:
+            form.save()
+            messages.success(
+                request, f'Review added successfully! Thanks!')
+        else:
+            messages.error(request, f'Upps something went wrong, please try again')
 
     context = {
         'form': form

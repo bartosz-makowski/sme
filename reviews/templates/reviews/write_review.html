@@ -7,6 +7,20 @@
 {% block content %}
 {% include 'components/navbar/navbar.html' %}
 <h2>Write a review</h2>
-
+<div class="row">
+    <div class="col-8">
+        <form method="POST" action="{% url 'write_review' %}" id="review-form">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Details</legend>
+                {{ form.title | as_crispy_field }}
+                {{ form.description | as_crispy_field }}
+                {{ form.author | as_crispy_field }}
+            </fieldset>
+            <a href="{% url 'home' %}">Go Back</a>
+            <input class="btn btn-success" type="submit" value="Save this review">
+        </form>
+    </div>
+</div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
