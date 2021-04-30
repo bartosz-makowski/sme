@@ -21,8 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&uqj+laxm+odbnl-g@sorr&h)d8y*!hi4x3m$eygc42_3_6%=7'
-# os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -166,7 +165,7 @@ USE_TZ = True
 
 # Bucket Config
 if 'USE_AWS' in os.environ:
-    AWS_STORAGE_BUCKET_NAME = 'sportsmassageexcellence'
+    AWS_STORAGE_BUCKET_NAME = 'sportsmassageexcellence1'
     AWS_S3_REGIION_NAME = 'eu-west-2'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -193,7 +192,7 @@ else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Stripe
-STRIPE_CURRENCY = 'usd'
+STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
