@@ -35,7 +35,8 @@ def write_review(request):
             messages.success(
                 request, f'Review added successfully! Thanks!')
         else:
-            messages.error(request, f'Upps something went wrong, please try again')
+            messages.error(
+                request, f'Upps something went wrong, please try again')
 
     context = {
         'form': form
