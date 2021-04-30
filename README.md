@@ -1,5 +1,5 @@
 # Sports Massage Excellence
-Project of the web application designed to promote services of a massage therapist based in the area of Hertfordshire UK. Users of the website are able to book and pay for appointments online using STRIPE payment platform.
+Project of the web application designed to promote services of a massage therapist based in the area of Hertfordshire UK. Users of the website are able to pay for appointments online using STRIPE payment platform and write reviews for the therapist.
 
 ## Contents:book:
 ### UX:superhero_man:	
@@ -27,13 +27,12 @@ Project of the web application designed to promote services of a massage therapi
 
 ## UX ( User Experience)
 ### Project Goals :jigsaw:	
-The goal of this project is to provide a massage therapist with his personal online presence where he could promote his services. Users of the website will be available to read information about a therapits and services provided, read a review from previous clients, schedule an appointment and pay for it using safe platfrom provided by STRIPE.
+The goal of this project is to provide a massage therapist with his personal online presence where he could promote his services. Users of the website will be available to read information about a therapits and services provided, read a review from previous clients, pay for treatments using safe platfrom provided by STRIPE.
 
 ### User Goals :jigsaw: 
 * Ability to set up an account
 * Ability to log in and log out
-* Ability to see available appointments
-* Ability to pay for my booked appointment 
+* Ability to pay for treatments 
 * Visual interaction and feedback
 * Interact with the website on Desktop tablet and mobile
 
@@ -41,27 +40,22 @@ The goal of this project is to provide a massage therapist with his personal onl
 ### As a user I want to be able to...
 * Register for an account
 * Log in or log out from my account
-* Have personalised user profile
 * Receive an email confirmation after registering
 * Recover my password in case I forget it
-* Make a purchase without registering for an account
 
 ### As a customer I want to be able to...
-* Make a purchase without registering for an account
 * See available therapies
 * See locations where I can get a treatment
 * Read reviews about the services provided
 
 ### As a registered user I want to be able to...
-* See a history of my purchases
-* See a personalised profile
-* Be able to see my aftercare advice
 * Write a review
-* Update my billing details
+* Purchase treatments
 
 ### As an admin I want to be able to...
 * Update available therapies
-* Write aftercare advice for my patients
+* Add locations
+* Easily change featured deals and reviews displayed on home page
 
 ## Site Owner Goals	:dart:
 
@@ -152,7 +146,7 @@ date | models.DateTimeField(auto_now_add=True)
 order_total | models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 stripe_pid | models.CharField(max_length=254, null=False, blank=False, default='')
 
-### **Order:**
+### **OrderLineItem:**
 Key      | Value
 ---------|-----------
 order | models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
