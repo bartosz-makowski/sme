@@ -12,7 +12,7 @@ from basket.contexts import basket_contents
 import stripe
 import json
 
-
+# Code written as per CodeInstitute tutorial
 @require_POST
 def cache_checkout_data(request):
     try:
