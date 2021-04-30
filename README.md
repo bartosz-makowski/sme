@@ -110,31 +110,32 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 ![booking chart](https://github.com/bartosz-makowski/sme/blob/master/wireframes/sme-booking-flow.png)
 
 ## **Models Structure**
-### **Profiles:**
-Key      | Value
----------|-----------
-user     | models.OneToOneField(User, on_delete=models.CASCADE)
-default_contact_number | models.CharField(max_length=20, null=True, blank=True)
-default_address1 | models.CharField(max_length=80, null=True, blank=True)
-default_address2 | models.CharField(max_length=80, null=True, blank=True)
-default_postcode | models.CharField(max_length=20, null=True, blank=True)
-default_city | models.CharField(max_length=40, null=True, blank=True)
 
-### **Therapies:**
+
+### **Treatments:**
 Key      | Value
 ---------|-----------
-therapy_name | models.CharField(max_length=50, null=False, blank=False,
-description | models.TextField()
+name | models.CharField(max_length=254, blank=False,
+description | models.TextField(blank=False)
 image | models.ImageField(null=False, blank=False)
+featured | models.BooleanField(default=False, null=True, blank=True)
 
 ### **Reviews:**
 Key      | Value
 ---------|-----------
-title | models.CharField(max_length=32, null=False, editable=False)
+title | models.CharField((max_length=50, null=False, blank=False, default='Title')
 description | models.TextField()
-author | models.CharField(max_length=50, null=False, blank=False)
-username | models.ForeignKey(Profile, on_delete=models.PROTECT)
+author | models.CharField(max_length=20, null=False, blank=True)
 date | DateTimeField(auto_now_add=True)
+
+### **Deals:**
+Key      | Value
+---------|-----------
+name | models.CharField(max_length=65)
+price | models.IntegerField(max_length=3)
+description | models.TextField()
+image | models.ImageField(null=True, blank=True)
+featured | models.BooleanField(default=False, null=True, blank=True)
 
 ### **Order:**
 Key      | Value
@@ -142,28 +143,42 @@ Key      | Value
 order_number | models.CharField(max_length=32, null=False, editable=False)
 full_name | models.CharField(max_length=50, null=False, blank=False)
 email | models.EmailField(max_length=254, null=False, blank=False)
-contact_number | models.CharField(max_length=20, null=True, blank=True)
-city | models.CharField(max_length=40, null=True, blank=True)
+phone_number | models.CharField(max_length=20, null=True, blank=True)
+town_or_city | models.CharField(max_length=40, null=True, blank=True)
 postcode | models.CharField(max_length=20, null=True, blank=True)
-address1 | models.CharField(max_length=80, null=True, blank=True)
-address2 | models.CharField(max_length=80, null=True, blank=True)
+street_address1 | models.CharField(max_length=80, null=True, blank=True)
+street_address2 | models.CharField(max_length=80, null=True, blank=True)
 date | models.DateTimeField(auto_now_add=True)
 order_total | models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 stripe_pid | models.CharField(max_length=254, null=False, blank=False, default='')
 
-### **Booking:**
+### **Order:**
 Key      | Value
 ---------|-----------
-date |
-time |
-fullname | models.CharField(max_length=50, null=False, blank=False)
+order | models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
+product | models.ForeignKey(Deal, null=False, blank=False, on_delete=models.CASCADE)
+quantity | models.IntegerField(null=False, blank=False, default=0)
+lineitem_total | models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False, default=0)
+
+### **Location:**
+Key      | Value
+---------|-----------
+description | models.TextField()
+image | image = models.ImageField(null=False, blank=False)
+
 
 ## Features :abacus:
 
 **Features that have been developed:**
+Featured deals and reviews are visible on home page
+Ability to pay for deals using credit cards through Stripe
+Adding deals and removing from the shopping basket
+
 
 
 **Features to be implemented in the future**
+Booking app to allow users to book appointments
+
 
 ## Technologies Used :computer:
 
@@ -183,6 +198,8 @@ fullname | models.CharField(max_length=50, null=False, blank=False)
 * [FontAwesome](https://fontawesome.com/)
 * [Balsamiq](https://balsamiq.com/)
 * [AmIresponsive](http://ami.responsivedesign.is/) - used to generate multi screen view of the webiste on different devices
+* [Milanote](https://milanote.com/)
+* [Unsplash](https://unsplash.com/)
 
 
 ### Testing :magnet:
